@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Katsu Kantin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="beranda.css">
+</head>
+<body>
+    <header class="status-header">
+        <div class="status-container">
+            <div class="status-item">
+                <span class="pulse-indicator"></span>
+                <strong>STATUS: BUKA</strong>
+            </div>
+            <div class="status-divider"></div>
+            <div class="status-item">
+                <span class="icon">🏃</span>
+                <span>Antrean: <strong>Lancar</strong></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-layout">
+        <nav class="sidebar">
+            <div class="brand">
+                <h1>Katsu<span>Kantin</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="beranda.html" class="active">Beranda</a></li>
+                <li><a href="menu.html">Menu & Pesan</a></li>
+                <li><a href="preorder.html">Jadwal Pre-Order</a></li>
+                <li><a href="tracker.html">Lacak Pesanan</a></li>
+                <li><a href="loyalty.html">Loyalty Hub</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h2>Katsu Lezat,<br>Tanpa Antre Lama.</h2>
+                    <p>Pesan langsung atau jadwalkan pre-order sebelum kelas selesai. Nikmati katsu hangat saat jam istirahat tiba.</p>
+                    <div class="hero-actions">
+                        <a href="menu.html"><button class="btn btn-primary">Pesan Sekarang</button></a>
+                        <a href="preorder.html"><button class="btn btn-outline">Lihat Jadwal Dapur</button></a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <span class="badge">PROMO MAHASISWA</span>
+                    <div class="katsu-showcase">
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Katsu Delicious">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Menu -->
+            <section style="margin-top: 48px;">
+                <h3 style="margin-bottom: 24px;">Paling Sering Dipesan 🔥</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+                    <!-- Card -->
+                    <div style="background: var(--bg-card); border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden; box-shadow: var(--shadow-sm);">
+                        <div style="height: 160px; background-image: url('https://images.unsplash.com/photo-1615557960916-5f4791effe9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+                        <div style="padding: 20px;">
+                            <h4 style="margin-bottom: 8px;">Chicken Katsu Original</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 12px; line-height: 1.4;">Katsu ayam renyah dengan saus tonkatsu spesial kantin.</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px;">
+                                <span style="font-weight: 800; color: var(--primary-color);">Rp 15.000</span>
+                                <a href="menu.html"><button class="btn btn-outline" style="padding: 8px 16px; font-size: 0.9rem;">+ Pesan</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card -->
+                    <div style="background: var(--bg-card); border-radius: var(--radius-lg); border: 1px solid var(--border-color); overflow: hidden; box-shadow: var(--shadow-sm);">
+                        <div style="height: 160px; background-image: url('https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+                        <div style="padding: 20px;">
+                            <h4 style="margin-bottom: 8px;">Spicy Mentai Katsu</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 12px; line-height: 1.4;">Topping saus mentai pedas yang dibakar lumer di atas katsu.</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 16px;">
+                                <span style="font-weight: 800; color: var(--primary-color);">Rp 28.000</span>
+                                <a href="menu.html"><button class="btn btn-outline" style="padding: 8px 16px; font-size: 0.9rem;">+ Pesan</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

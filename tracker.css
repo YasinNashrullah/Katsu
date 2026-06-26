@@ -1,0 +1,148 @@
+/* Live Order Tracker */
+.tracker-section {
+    background-color: var(--bg-card);
+    padding: 56px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+.tracker-container {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+    gap: 64px;
+    align-items: center;
+}
+.stepper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 40px;
+}
+.stepper::before {
+    content: '';
+    position: absolute;
+    top: 36px;
+    left: 40px;
+    right: 40px;
+    height: 4px;
+    background-color: var(--border-color);
+    z-index: 1;
+}
+.step {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 140px;
+}
+.step-icon {
+    width: 76px;
+    height: 76px;
+    background-color: var(--bg-card);
+    border: 4px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    transition: all 0.4s ease;
+}
+.step.completed .step-icon {
+    border-color: var(--accent-green);
+    background-color: var(--accent-green-light);
+}
+.step.active .step-icon {
+    border-color: var(--accent-red);
+    background-color: #FEF2F2;
+}
+.step-label {
+    font-weight: 700;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+.step.active .step-label {
+    color: var(--accent-red);
+}
+.step.completed .step-label {
+    color: var(--text-main);
+}
+.pulse {
+    animation: icon-pulse 2s infinite;
+}
+@keyframes icon-pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(200, 35, 51, 0.4); }
+    70% { transform: scale(1.1); box-shadow: 0 0 0 12px rgba(200, 35, 51, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(200, 35, 51, 0); }
+}
+
+/* Ticket */
+.ticket-container {
+    background-color: var(--bg-primary);
+    border: 2px dashed var(--text-muted);
+    border-radius: var(--radius-md);
+    padding: 32px;
+    text-align: center;
+    position: relative;
+}
+.ticket-container::before, .ticket-container::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: var(--bg-card);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.ticket-container::before {
+    left: -12px;
+    border-right: 2px dashed var(--text-muted);
+}
+.ticket-container::after {
+    right: -12px;
+    border-left: 2px dashed var(--text-muted);
+}
+.ticket-header {
+    margin-bottom: 24px;
+    border-bottom: 2px dashed var(--border-color);
+    padding-bottom: 20px;
+}
+.ticket-header h4 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+.ticket-time {
+    color: var(--accent-red);
+    font-weight: 700;
+    font-size: 1rem;
+}
+.qr-mockup {
+    width: 140px;
+    height: 140px;
+    background-color: white;
+    border-radius: 12px;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+}
+.qr-pattern {
+    width: 110px;
+    height: 110px;
+    background: 
+        linear-gradient(45deg, #1E1E1E 25%, transparent 25%, transparent 75%, #1E1E1E 75%, #1E1E1E),
+        linear-gradient(45deg, #1E1E1E 25%, transparent 25%, transparent 75%, #1E1E1E 75%, #1E1E1E);
+    background-size: 22px 22px;
+    background-position: 0 0, 11px 11px;
+    opacity: 0.85;
+}
+.qr-instruction {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}

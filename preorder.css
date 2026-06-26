@@ -1,0 +1,101 @@
+/* Pre-Order Schedule Matrix */
+.preorder-section {
+    background-color: var(--bg-card);
+    padding: 56px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+.schedule-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.segmented-toggle {
+    display: flex;
+    position: relative;
+    background-color: var(--bg-primary);
+    padding: 8px;
+    border-radius: var(--radius-full);
+    width: max-content;
+    border: 1px solid var(--border-color);
+}
+.segmented-toggle input[type="radio"] {
+    display: none;
+}
+.segmented-toggle label {
+    padding: 12px 32px;
+    font-weight: 700;
+    color: var(--text-muted);
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+.segmented-toggle input[type="radio"]:checked + label {
+    color: var(--text-main);
+}
+.toggle-bg {
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 8px;
+    width: calc(50% - 8px);
+    background-color: var(--bg-card);
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-sm);
+    z-index: 1;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#takeaway:checked ~ .toggle-bg {
+    transform: translateX(100%);
+}
+.schedule-matrix {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+.time-slot {
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 32px 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.time-slot:hover:not(.full) {
+    border-color: var(--accent-red);
+    background-color: #FEF2F2;
+    transform: translateY(-4px);
+}
+.time-slot .time {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--text-main);
+}
+.time-slot .status {
+    font-size: 1rem;
+    font-weight: 700;
+}
+.time-slot.available .status {
+    color: var(--accent-green);
+}
+.time-slot.selected {
+    border-color: var(--accent-red);
+    background-color: var(--accent-red);
+    box-shadow: 0 8px 20px rgba(200, 35, 51, 0.3);
+}
+.time-slot.selected .time, .time-slot.selected .status {
+    color: white;
+}
+.time-slot.full {
+    background-color: var(--bg-primary);
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.time-slot.full .status {
+    color: var(--accent-red);
+}

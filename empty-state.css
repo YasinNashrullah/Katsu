@@ -1,0 +1,35 @@
+/* Empty state styles */
+.empty-section {
+    background-color: var(--bg-card);
+    padding: 64px 32px;
+    border-radius: var(--radius-lg);
+    border: 1px dashed var(--border-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.empty-illustration {
+    font-size: 6rem;
+    margin-bottom: 24px;
+    filter: grayscale(0.5);
+    opacity: 0.8;
+}
+
+.empty-section h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-main);
+}
+
+.empty-section p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 400px;
+    margin: 0 auto 32px;
+    line-height: 1.5;
+}

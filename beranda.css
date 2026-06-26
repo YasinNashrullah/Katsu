@@ -132,7 +132,7 @@ body {
     padding: 48px 64px;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 48px;
 }
 .section-header {
     margin-bottom: 32px;

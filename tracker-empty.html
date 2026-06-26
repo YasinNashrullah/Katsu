@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lacak Pesanan (Kosong) - Katsu Kantin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="empty-state.css">
+</head>
+<body>
+    <header class="status-header">
+        <div class="status-container">
+            <div class="status-item">
+                <span class="pulse-indicator"></span>
+                <strong>STATUS: BUKA</strong>
+            </div>
+            <div class="status-divider"></div>
+            <div class="status-item">
+                <span class="icon">🏃</span>
+                <span>Antrean: <strong>Lancar</strong></span>
+            </div>
+            <div class="status-divider"></div>
+            <div class="status-item">
+                <span class="icon">🍱</span>
+                <span>Sisa Pre-Order: <strong>12 Porsi</strong></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-layout">
+        <nav class="sidebar">
+            <div class="brand">
+                <h1>Katsu<span>Kantin</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="beranda.html">Beranda</a></li>
+                <li><a href="menu.html">Menu & Pesan</a></li>
+                <li><a href="preorder.html">Jadwal Pre-Order</a></li>
+                <li><a href="tracker-empty.html" class="active">Lacak Pesanan</a></li>
+                <li><a href="loyalty.html">Loyalty Hub</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <div class="section-header">
+                <h3>Lacak Pesanan</h3>
+                <p>Pantau pesanan aktif Anda di sini.</p>
+            </div>
+            
+            <div class="empty-section">
+                <div class="empty-illustration">📭</div>
+                <h3>Belum ada pesanan aktif</h3>
+                <p>Anda belum memesan apapun hari ini. Yuk lihat menu Katsu yang sedang promo, mumpung antrean lagi lancar!</p>
+                <a href="menu.html" class="btn btn-primary" style="text-decoration: none;">Lihat Menu Sekarang</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

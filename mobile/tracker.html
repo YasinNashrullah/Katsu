@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Pesanan - Katsu Kantin Mobile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tracker.css">
+</head>
+<body>
+    <div class="mobile-app-container">
+        <!-- Header -->
+        <header class="mobile-header" style="justify-content: center;">
+            <h1>Lacak<span>Pesanan</span></h1>
+        </header>
+
+        <main class="m-tracker-content">
+            <!-- Status Card -->
+            <div class="m-status-card">
+                <h2>Sedang Disiapkan</h2>
+                <p>Estimasi selesai dalam <strong>10 Menit</strong></p>
+                <div class="m-queue-number">
+                    #089
+                </div>
+                <div style="margin-top: 16px; font-size: 0.8rem; color: var(--text-muted);">
+                    ID: KTS-089-ABCD
+                </div>
+            </div>
+
+            <!-- Vertical Stepper -->
+            <h3 style="font-size: 1.1rem; margin-bottom: 20px;">Status Dapur</h3>
+            <div class="m-stepper">
+                <!-- Step 1 -->
+                <div class="m-step done">
+                    <div class="m-step-icon"></div>
+                    <div class="m-step-content">
+                        <h4>Pesanan Diterima</h4>
+                        <p>Pembayaran Rp 43.345 berhasil.</p>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="m-step active">
+                    <div class="m-step-icon"></div>
+                    <div class="m-step-content">
+                        <h4>Sedang Digoreng 🍳</h4>
+                        <p>Katsu kamu sedang dimasak, mohon ditunggu.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="m-step">
+                    <div class="m-step-icon"></div>
+                    <div class="m-step-content">
+                        <h4>Siap Diambil</h4>
+                        <p>Tunjukkan nomor antrean ke kasir.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="beranda.html" class="nav-item">
+                <span class="icon">🏠</span>
+                <span class="label">Beranda</span>
+            </a>
+            <a href="menu.html" class="nav-item">
+                <span class="icon">🍱</span>
+                <span class="label">Menu</span>
+            </a>
+            <a href="preorder.html" class="nav-item">
+                <span class="icon">⏰</span>
+                <span class="label">Jadwal</span>
+            </a>
+            <a href="tracker.html" class="nav-item active">
+                <span class="icon">📦</span>
+                <span class="label">Pesanan</span>
+            </a>
+            <a href="loyalty.html" class="nav-item">
+                <span class="icon">⭐</span>
+                <span class="label">Poin</span>
+            </a>
+        </nav>
+    </div>
+</body>
+</html>

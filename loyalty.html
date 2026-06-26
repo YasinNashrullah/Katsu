@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loyalty Hub - Katsu Kantin</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="loyalty.css">
 </head>
 <body>
@@ -38,22 +37,67 @@
         </nav>
 
         <main class="main-content">
-            <section class="loyalty-section" style="background: var(--bg-card); padding: 40px; border-radius: 12px; border: 1px solid var(--border-color);">
-                <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                    <div style="font-size: 4rem; margin-bottom: 16px;">🎁</div>
-                    <h2 style="font-size: 2rem; margin-bottom: 16px;">Kumpul Poin, Makan Gratis!</h2>
-                    <p style="color: var(--text-secondary); margin-bottom: 32px; line-height: 1.6;">Dapatkan 1 Poin setiap pembelian 1 Porsi Katsu. Kumpulkan 10 Poin untuk ditukar dengan 1 Porsi Chicken Katsu Original Gratis.</p>
-                    
-                    <div style="background: var(--bg-primary); padding: 32px; border-radius: 16px; border: 2px solid var(--primary-color);">
-                        <h4 style="margin-bottom: 16px;">Poin Anda Saat Ini:</h4>
-                        <h1 style="font-size: 4rem; color: var(--primary-color); margin-bottom: 16px;">3 <span style="font-size: 1.5rem; color: var(--text-muted);">/ 10</span></h1>
-                        <div style="width: 100%; height: 16px; background: #E5E7EB; border-radius: 8px; overflow: hidden; margin-bottom: 16px;">
-                            <div style="width: 30%; height: 100%; background: var(--primary-color); border-radius: 8px;"></div>
+            <div class="loyalty-grid">
+                <div class="loyalty-main">
+                    <!-- Points Display -->
+                    <div class="point-card-desktop">
+                        <h2>Poin Saya</h2>
+                        <div class="point-val-desktop">420</div>
+                        <div class="point-progress-desktop">
+                            <div class="progress-fill-desktop" style="width: 84%;"></div>
                         </div>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Beli 7 porsi lagi untuk mendapatkan katsu gratis!</p>
+                        <div class="point-desc-desktop">80 poin lagi untuk mendapatkan Katsu Gratis!</div>
+                    </div>
+
+                    <!-- Rewards Catalog -->
+                    <div class="rewards-header">
+                        <h3>Tukar Hadiah</h3>
+                        <a href="#" style="font-size: 0.9rem; color: var(--accent-red); text-decoration: none; font-weight: 600;">Lihat Riwayat ❯</a>
+                    </div>
+
+                    <div class="reward-grid">
+                        <!-- Reward 1 -->
+                        <div class="reward-item">
+                            <div class="reward-icon">🥤</div>
+                            <div class="reward-details">
+                                <h4>Es Teh Manis</h4>
+                                <p>100 Poin</p>
+                            </div>
+                            <button class="btn btn-outline" style="color: var(--accent-red); border-color: var(--accent-red); padding: 8px 16px; width: auto;">Tukar</button>
+                        </div>
+
+                        <!-- Reward 2 -->
+                        <div class="reward-item">
+                            <div class="reward-icon">🍟</div>
+                            <div class="reward-details">
+                                <h4>Kentang Goreng</h4>
+                                <p>250 Poin</p>
+                            </div>
+                            <button class="btn btn-outline" style="color: var(--accent-red); border-color: var(--accent-red); padding: 8px 16px; width: auto;">Tukar</button>
+                        </div>
+
+                        <!-- Reward 3 (Disabled) -->
+                        <div class="reward-item" style="opacity: 0.6;">
+                            <div class="reward-icon" style="background: var(--bg-main); color: var(--text-muted);">🍱</div>
+                            <div class="reward-details">
+                                <h4>Katsu Original Gratis</h4>
+                                <p>500 Poin</p>
+                            </div>
+                            <button class="btn btn-outline" disabled style="background: var(--bg-main); color: var(--text-muted); border-color: var(--border-color); padding: 8px 16px; width: auto;">Kurang</button>
+                        </div>
                     </div>
                 </div>
-            </section>
+
+                <!-- Right Sidebar for QR -->
+                <aside class="qr-section">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 12px; width: 100%;">Member QR Code</h3>
+                    <p>Tunjukkan QR Code ini ke kasir saat melakukan pembayaran untuk menambah poin Anda.</p>
+                    <div class="qr-box">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=KATSU-USER-0895" alt="QR Code User" style="width: 180px; height: 180px; opacity: 0.9;">
+                    </div>
+                    <div style="margin-top: 16px; font-size: 0.9rem; color: var(--text-main); font-weight: 700;">ID: KATSU-USER-0895</div>
+                </aside>
+            </div>
         </main>
     </div>
 </body>

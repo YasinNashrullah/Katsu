@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Menu - Katsu Kantin Mobile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <div class="mobile-app-container">
+        <!-- Header -->
+        <header class="mobile-header">
+            <h1>Menu<span>Kantin</span></h1>
+            <div style="font-size: 1.2rem;">🔍</div>
+        </header>
+
+        <!-- Category Sticky Header -->
+        <div class="m-menu-header">
+            <div class="m-category-pills">
+                <div class="m-pill active">Semua</div>
+                <div class="m-pill">Katsu Utama</div>
+                <div class="m-pill">Menu Nasi</div>
+                <div class="m-pill">Ekstra</div>
+            </div>
+        </div>
+
+        <!-- Menu List -->
+        <div class="m-menu-list">
+            <h3 style="font-size: 1.1rem; margin-bottom: 8px;">Katsu Utama</h3>
+            
+            <!-- Item 1 -->
+            <div class="m-menu-item">
+                <div class="m-menu-img" style="background-image: url('https://images.unsplash.com/photo-1615557960916-5f4791effe9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="m-menu-details">
+                    <div>
+                        <h4>Chicken Katsu Original</h4>
+                        <p>Katsu ayam renyah dengan saus tonkatsu spesial kantin.</p>
+                    </div>
+                    <div class="m-menu-price-row">
+                        <span class="m-price">Rp 15.000</span>
+                        <button class="m-add-btn">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="m-menu-item">
+                <div class="m-menu-img" style="background-image: url('https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="m-menu-details">
+                    <div>
+                        <h4>Spicy Mentai Katsu</h4>
+                        <p>Topping saus mentai pedas yang dibakar lumer di atas katsu.</p>
+                    </div>
+                    <div class="m-menu-price-row">
+                        <span class="m-price">Rp 28.000</span>
+                        <button class="m-add-btn">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="font-size: 1.1rem; margin-top: 16px; margin-bottom: 8px;">Ekstra & Tambahan</h3>
+            
+            <!-- Item 3 -->
+            <div class="m-menu-item">
+                <div class="m-menu-img" style="background-image: url('https://images.unsplash.com/photo-1573081467616-24ba04aee9df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="m-menu-details">
+                    <div>
+                        <h4>Telur Mata Sapi</h4>
+                        <p>Telur ceplok setengah matang / matang.</p>
+                    </div>
+                    <div class="m-menu-price-row">
+                        <span class="m-price">Rp 3.000</span>
+                        <button class="m-add-btn" style="background: white; color: var(--primary-color); border: 1px solid var(--border-color); box-shadow: none;">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Cart (Visible because items are mocked as added) -->
+        <a href="checkout.html" class="m-floating-cart">
+            <div class="m-cart-info">
+                <div class="m-cart-icon">
+                    🛒
+                    <span class="m-cart-badge">2</span>
+                </div>
+                <div style="display: flex; flex-direction: column;">
+                    <span style="font-size: 0.7rem; opacity: 0.9;">Total Pesanan</span>
+                    <span class="m-cart-total">Rp 43.000</span>
+                </div>
+            </div>
+            <div class="m-cart-action">
+                Checkout ➔
+            </div>
+        </a>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="beranda.html" class="nav-item">
+                <span class="icon">🏠</span>
+                <span class="label">Beranda</span>
+            </a>
+            <a href="menu.html" class="nav-item active">
+                <span class="icon">🍱</span>
+                <span class="label">Menu</span>
+            </a>
+            <a href="preorder.html" class="nav-item">
+                <span class="icon">⏰</span>
+                <span class="label">Jadwal</span>
+            </a>
+            <a href="tracker.html" class="nav-item">
+                <span class="icon">📦</span>
+                <span class="label">Pesanan</span>
+            </a>
+            <a href="loyalty.html" class="nav-item">
+                <span class="icon">⭐</span>
+                <span class="label">Poin</span>
+            </a>
+        </nav>
+    </div>
+</body>
+</html>

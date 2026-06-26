@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Beranda - Katsu Kantin Mobile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="beranda.css">
+</head>
+<body>
+    <div class="mobile-app-container">
+        <!-- Header -->
+        <header class="mobile-header">
+            <h1>Katsu<span>Kantin</span></h1>
+            <div style="width: 36px; height: 36px; background: var(--bg-primary); border-radius: 50%; display: flex; justify-content: center; align-items: center; color: var(--primary-color);">
+                👤
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="m-hero">
+            <div class="m-hero-bg"></div>
+            <h2>Katsu Lezat,<br>Tanpa Antre.</h2>
+            <p>Pesan atau jadwal pre-order sekarang!</p>
+            <div class="m-actions">
+                <a href="menu.html" style="text-decoration: none; flex: 1;">
+                    <button class="btn btn-primary">Pesan</button>
+                </a>
+                <a href="preorder.html" style="text-decoration: none; flex: 1;">
+                    <button class="btn btn-outline">Jadwal</button>
+                </a>
+            </div>
+        </section>
+
+        <!-- Poin Ringkas (Mini Poin) -->
+        <section class="m-section" style="padding-top: 24px; padding-bottom: 12px;">
+            <div style="background: white; border-radius: var(--radius-md); padding: 16px; box-shadow: var(--shadow-sm); display: flex; justify-content: space-between; align-items: center; border: 1px solid var(--border-color);">
+                <div>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Katsu Poin</p>
+                    <h4 style="color: var(--primary-color); font-size: 1.1rem;">⭐ 420 Poin</h4>
+                </div>
+                <a href="loyalty.html" style="text-decoration: none; font-size: 0.85rem; color: var(--primary-color); font-weight: 700; background: var(--bg-primary); padding: 6px 12px; border-radius: var(--radius-full);">Tukar</a>
+            </div>
+        </section>
+
+        <!-- Pesan Lagi (Quick Reorder) -->
+        <section class="m-section" style="padding-top: 0; padding-bottom: 24px;">
+            <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 16px; box-shadow: var(--shadow-sm); display: flex; gap: 16px; align-items: center;">
+                <div style="font-size: 2rem; background: var(--bg-main); width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 50%;">🔄</div>
+                <div style="flex: 1;">
+                    <h4 style="font-size: 0.95rem; margin-bottom: 4px;">Pesan Lagi</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-muted);">Chicken Katsu Original (1)</p>
+                </div>
+                <a href="checkout.html"><button class="btn btn-primary" style="padding: 6px 16px; font-size: 0.85rem; width: auto;">Pesan</button></a>
+            </div>
+        </section>
+
+        <!-- Favorite Menu -->
+        <section class="m-section">
+            <div class="m-section-header">
+                <h3>Paling Sering Dipesan 🔥</h3>
+                <a href="menu.html">Lihat Semua</a>
+            </div>
+            
+            <div class="m-card-scroll">
+                <!-- Card 1 -->
+                <div class="m-katsu-card">
+                    <div class="m-katsu-img" style="background-image: url('https://images.unsplash.com/photo-1615557960916-5f4791effe9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="m-katsu-info">
+                        <h4>Chicken Katsu Original</h4>
+                        <p>Katsu ayam renyah dengan saus tonkatsu spesial kantin.</p>
+                        <div class="m-katsu-bottom">
+                            <span class="m-katsu-price">Rp 15.000</span>
+                            <a href="menu.html"><button class="btn btn-outline">+ Tambah</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="m-katsu-card">
+                    <div class="m-katsu-img" style="background-image: url('https://images.unsplash.com/photo-1628840042765-356cda07504e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="m-katsu-info">
+                        <h4>Spicy Mentai Katsu</h4>
+                        <p>Topping saus mentai pedas yang dibakar lumer di atas katsu.</p>
+                        <div class="m-katsu-bottom">
+                            <span class="m-katsu-price">Rp 28.000</span>
+                            <a href="menu.html"><button class="btn btn-outline">+ Tambah</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promo Banner -->
+        <section class="m-section" style="padding-top: 0;">
+            <div style="background: var(--bg-primary); border-radius: var(--radius-md); padding: 16px; border: 1px dashed var(--primary-color); display: flex; align-items: center; gap: 16px;">
+                <div style="font-size: 2rem;">🎁</div>
+                <div>
+                    <h4 style="color: var(--primary-color); margin-bottom: 4px;">Klaim Poin Katsu-mu!</h4>
+                    <p style="font-size: 0.8rem; color: var(--text-secondary);">Tukarkan 100 poin dengan minuman gratis.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="beranda.html" class="nav-item active">
+                <span class="icon">🏠</span>
+                <span class="label">Beranda</span>
+            </a>
+            <a href="menu.html" class="nav-item">
+                <span class="icon">🍱</span>
+                <span class="label">Menu</span>
+            </a>
+            <a href="preorder.html" class="nav-item">
+                <span class="icon">⏰</span>
+                <span class="label">Jadwal</span>
+            </a>
+            <a href="tracker.html" class="nav-item">
+                <span class="icon">📦</span>
+                <span class="label">Pesanan</span>
+            </a>
+            <a href="loyalty.html" class="nav-item">
+                <span class="icon">⭐</span>
+                <span class="label">Poin</span>
+            </a>
+        </nav>
+    </div>
+</body>
+</html>

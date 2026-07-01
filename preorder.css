@@ -269,7 +269,14 @@ body {
     opacity: 1;
 }
 
-.preorder-menu-list {
+.preorder-addons-section {
+    margin-top: 60px;
+    border-top: 1px dashed rgba(240, 233, 223, 1);
+    padding-top: 60px;
+}
+
+.preorder-menu-list,
+.preorder-addons-list {
     padding: 90px 16px 20px 16px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -281,7 +288,7 @@ body {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.6) 100%);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 60px 16px 60px 16px;
+    border-radius: 36px 4px 36px 4px;
     padding: 95px 20px 24px 20px;
     display: flex;
     flex-direction: column;
@@ -294,14 +301,14 @@ body {
 }
 
 .preorder-item-card:hover {
-    border-radius: 16px 60px 16px 60px;
+    border-radius: 4px 36px 4px 36px;
     border-color: rgba(255, 107, 0, 0.35);
     box-shadow: 0 20px 40px rgba(255, 107, 0, 0.08), inset 0 2px 4px rgba(255, 255, 255, 0.9);
     transform: translateY(-6px);
 }
 
 .preorder-item-card.active {
-    border-radius: 16px 60px 16px 60px;
+    border-radius: 4px 36px 4px 36px;
     border-color: var(--primary);
     background-color: var(--light);
     box-shadow: 0 20px 40px rgba(255, 107, 0, 0.12), inset 0 2px 4px rgba(255, 255, 255, 0.9);
@@ -528,57 +535,58 @@ body {
 }
 
 .scheduler-card {
-    background: rgba(255, 255, 255, 0.65);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.55) 100%);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: var(--radius-lg);
-    padding: 32px;
-    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 48px 6px 48px 6px;
+    padding: 36px;
+    box-shadow: 0 15px 40px rgba(15, 15, 17, 0.05), inset 0 2px 4px rgba(255, 255, 255, 0.8);
     display: grid;
     grid-template-columns: 1.3fr 1fr;
     gap: 48px;
     align-items: start;
+    overflow: visible;
 }
 
 .scheduler-inputs {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 28px;
 }
 
 .scheduler-group {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
 .scheduler-card h4 {
     font-family: var(--font-heading);
-    font-size: 11px;
+    font-size: 11.5px;
     font-weight: 800;
     color: var(--dark);
     text-transform: uppercase;
-    letter-spacing: 0.8px;
+    letter-spacing: 1px;
     border-left: 3px solid var(--primary);
-    padding-left: 8px;
+    padding-left: 10px;
 }
 
 .date-selector {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 12px;
 }
 
 .date-btn {
-    border: 1.5px solid var(--border-light);
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: var(--radius-md);
-    padding: 12px 8px;
+    border: 1.5px solid rgba(255, 107, 0, 0.15);
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 14px 2px 14px 2px;
+    padding: 14px 10px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: var(--transition-smooth);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .date-btn .day {
@@ -586,7 +594,7 @@ body {
     color: var(--text-muted);
     font-weight: 700;
     text-transform: uppercase;
-    transition: var(--transition-smooth);
+    transition: all 0.4s ease;
 }
 
 .date-btn .num {
@@ -595,15 +603,17 @@ body {
     font-weight: 800;
     color: var(--dark);
     margin-top: 2px;
-    transition: var(--transition-smooth);
+    transition: all 0.4s ease;
 }
 
 .date-btn:hover {
+    border-radius: 2px 14px 2px 14px;
     border-color: var(--primary);
-    background: rgba(255, 107, 0, 0.03);
+    background: rgba(255, 107, 0, 0.04);
 }
 
 .date-btn.active {
+    border-radius: 2px 14px 2px 14px;
     border-color: var(--primary);
     background: linear-gradient(135deg, var(--primary) 0%, #ff8522 100%);
     box-shadow: 0 8px 20px rgba(255, 107, 0, 0.2);
@@ -620,20 +630,20 @@ body {
 .time-slots {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
+    gap: 10px;
 }
 
 .time-btn {
-    border: 1.5px solid var(--border-light);
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: var(--radius-sm);
-    padding: 12px 6px;
+    border: 1.5px solid rgba(255, 107, 0, 0.15);
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 14px 2px 14px 2px;
+    padding: 14px 8px;
     cursor: pointer;
     font-family: var(--font-body);
     font-size: 11px;
     font-weight: 700;
     color: var(--text-dark);
-    transition: var(--transition-smooth);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
     text-align: center;
     display: flex;
     align-items: center;
@@ -641,26 +651,28 @@ body {
 }
 
 .time-btn:hover {
+    border-radius: 2px 14px 2px 14px;
     border-color: var(--primary);
-    background: rgba(255, 107, 0, 0.03);
+    background: rgba(255, 107, 0, 0.04);
 }
 
 .time-btn.active {
+    border-radius: 2px 14px 2px 14px;
     border-color: var(--primary);
     background: linear-gradient(135deg, var(--primary) 0%, #ff8522 100%);
     color: var(--light);
-    box-shadow: 0 8px 16px rgba(255, 107, 0, 0.15);
+    box-shadow: 0 8px 16px rgba(255, 107, 0, 0.2);
 }
 
 .preorder-summary {
-    background: linear-gradient(135deg, #161513 0%, #0c0b0a 100%);
-    border: 1px solid rgba(255, 255, 255, 0.03);
+    background: linear-gradient(135deg, #141416 0%, #080809 100%);
+    border: 1.5px dashed rgba(255, 107, 0, 0.35);
     color: var(--light);
-    border-radius: var(--radius-md);
-    padding: 20px;
+    border-radius: 28px 4px 28px 4px;
+    padding: 24px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 16px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
@@ -672,15 +684,16 @@ body {
 
 .summary-header h3 {
     font-family: var(--font-heading);
-    font-size: 16px;
+    font-size: 16.5px;
     font-weight: 800;
+    color: var(--light);
     letter-spacing: -0.2px;
 }
 
 .summary-schedule {
     font-size: 11px;
     color: var(--primary);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .summary-items {
@@ -697,7 +710,7 @@ body {
 
 .item-qty {
     color: var(--primary);
-    font-weight: 700;
+    font-weight: 800;
     margin-right: 8px;
     min-width: 16px;
 }
@@ -705,11 +718,12 @@ body {
 .item-name {
     color: rgba(255, 255, 255, 0.85);
     flex-grow: 1;
+    font-weight: 500;
 }
 
 .item-total {
     font-family: var(--font-heading);
-    font-weight: 600;
+    font-weight: 700;
     color: var(--light);
 }
 
@@ -739,12 +753,12 @@ body {
 
 .calc-row strong {
     font-family: var(--font-heading);
-    font-weight: 600;
+    font-weight: 700;
     color: var(--light);
 }
 
 .calc-row.total .grand-total {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 800;
     color: var(--primary);
 }
@@ -791,7 +805,8 @@ body {
         gap: 40px;
         height: auto;
     }
-    .preorder-menu-list {
+    .preorder-menu-list,
+    .preorder-addons-list {
         grid-template-columns: repeat(2, 1fr);
         padding: 90px 16px 20px 16px;
         gap: 90px 24px;
@@ -826,7 +841,8 @@ body {
 }
 
 @media (max-width: 600px) {
-    .preorder-menu-list {
+    .preorder-menu-list,
+    .preorder-addons-list {
         grid-template-columns: 1fr;
         gap: 85px 0;
         padding-top: 85px;

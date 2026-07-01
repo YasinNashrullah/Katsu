@@ -3,78 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jadwal Pre-Order - Katsu Kantin</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Preorder - KatsuBowl Premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="preorder.css">
 </head>
 <body>
-    <header class="status-header">
-        <div class="status-container">
-            <div class="status-item">
-                <span class="pulse-indicator"></span>
-                <strong>STATUS: BUKA</strong>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-accent">Katsu</span>Bowl
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="menu.html">Menu Kami</a>
+                <a href="preorder.html" class="active">Preorder</a>
+                <a href="loyalty.html">Loyalty</a>
+                <a href="tentang.html">Tentang Kami</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="https://wa.me/6281234567890?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Katsu%20Bowl." target="_blank" class="btn btn-primary">Pesan Sekarang</a>
             </div>
-            <div class="status-divider"></div>
-            <div class="status-item">
-                <span class="icon">🏃</span>
-                <span>Antrean: <strong>Lancar</strong></span>
-            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
         </div>
     </header>
 
-    <div class="dashboard-layout">
-        <nav class="sidebar">
-            <div class="brand">
-                <h1>Katsu<span>Kantin</span></h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="beranda.html">Beranda</a></li>
-                <li><a href="menu.html">Menu & Pesan</a></li>
-                <li><a href="preorder.html" class="active">Jadwal Pre-Order</a></li>
-                <li><a href="tracker.html">Lacak Pesanan</a></li>
-                <li><a href="loyalty.html">Loyalty Hub</a></li>
-            </ul>
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer">
+        <div class="drawer-header">
+            <a href="index.html" class="logo"><span class="logo-accent">Katsu</span>Bowl</a>
+            <button class="drawer-close" aria-label="Close Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <nav class="drawer-links">
+            <a href="index.html">Beranda</a>
+            <a href="menu.html">Menu Kami</a>
+            <a href="preorder.html">Preorder</a>
+            <a href="loyalty.html">Loyalty</a>
+            <a href="tentang.html">Tentang Kami</a>
+            <a href="https://wa.me/62817567166?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Katsu%20Bowl." target="_blank" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%;">Pesan Sekarang</a>
         </nav>
+    </div>
+    <div class="drawer-overlay"></div>
 
-        <main class="main-content">
-            <section class="preorder-section">
-                <div class="section-header">
-                    <h3>Jadwal Pre-Order Dapur</h3>
-                    <p>Cek ketersediaan slot jam istirahat hari ini.</p>
-                </div>
-                
-                <div class="schedule-container">
-                    <div class="schedule-matrix">
-                        <div class="time-slot full">
-                            <span class="time">09:45</span>
-                            <span class="status">Penuh</span>
-                        </div>
-                        <div class="time-slot available">
-                            <span class="time">11:45</span>
-                            <span class="status">Sisa 12</span>
-                        </div>
-                        <div class="time-slot available selected">
-                            <span class="time">13:00</span>
-                            <span class="status">Sisa 20</span>
-                        </div>
-                        <div class="time-slot available">
-                            <span class="time">15:15</span>
-                            <span class="status">Tersedia</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="margin-top: 40px; padding: 24px; background: var(--bg-primary); border-radius: 12px; border: 1px dashed var(--border-color);">
-                    <h4 style="margin-bottom: 8px;">Cara Pre-Order:</h4>
-                    <p style="color: var(--text-secondary); line-height: 1.6;">
-                        1. Buka <strong>Menu & Pesan</strong>.<br>
-                        2. Pilih makanan yang Anda inginkan.<br>
-                        3. Di Checkout, pilih <strong>Pre-Order (Pilih Jam)</strong> pada opsi waktu.<br>
-                        4. Bayar melalui QRIS dan ambil pesanan Anda tepat pada jam tersebut.
-                    </p>
+    <main class="preorder-main container">
+        <div class="preorder-grid">
+            <section class="preorder-menu-section">
+                <h2>Pilih Menu Anda</h2>
+                <p class="section-desc">Tentukan menu katsu favorit untuk pesanan preorder Anda.</p>
+                <div class="preorder-menu-list">
+                    <div class="preorder-item-card"><img src="assets/product_curry.png" alt="Katsu saus teriyaki"><div class="item-details"><h5>Katsu saus teriyaki</h5><span class="price">Rp 15.000</span></div><div class="item-counter"><button class="count-btn minus" data-id="4">-</button><span class="count-val" id="qty-4">0</span><button class="count-btn plus" data-id="4" data-name="Katsu saus teriyaki" data-price="15000">+</button></div></div>
+                    <div class="preorder-item-card"><img src="assets/product_curry.png" alt="Katsu saus lada hitam"><div class="item-details"><h5>Katsu saus lada hitam</h5><span class="price">Rp 15.000</span></div><div class="item-counter"><button class="count-btn minus" data-id="5">-</button><span class="count-val" id="qty-5">0</span><button class="count-btn plus" data-id="5" data-name="Katsu saus lada hitam" data-price="15000">+</button></div></div>
+                    <div class="preorder-item-card"><img src="assets/product_curry.png" alt="Katsu saus keju"><div class="item-details"><h5>Katsu saus keju</h5><span class="price">Rp 15.000</span></div><div class="item-counter"><button class="count-btn minus" data-id="9">-</button><span class="count-val" id="qty-9">0</span><button class="count-btn plus" data-id="9" data-name="Katsu saus keju" data-price="15000">+</button></div></div>
+                    <div class="preorder-item-card"><img src="assets/product_curry.png" alt="Katsu saus mentega"><div class="item-details"><h5>Katsu saus mentega</h5><span class="price">Rp 15.000</span></div><div class="item-counter"><button class="count-btn minus" data-id="6">-</button><span class="count-val" id="qty-6">0</span><button class="count-btn plus" data-id="6" data-name="Katsu saus mentega" data-price="15000">+</button></div></div>
+                    <div class="preorder-item-card"><img src="assets/product_curry.png" alt="Katsu saus mayo"><div class="item-details"><h5>Katsu saus mayo</h5><span class="price">Rp 15.000</span></div><div class="item-counter"><button class="count-btn minus" data-id="7">-</button><span class="count-val" id="qty-7">0</span><button class="count-btn plus" data-id="7" data-name="Katsu saus mayo" data-price="15000">+</button></div></div>
+                    <div class="preorder-item-card"><img src="assets/product_donburi.png" alt="Rice bowl lada hitam"><div class="item-details"><h5>Rice bowl lada hitam</h5><span class="price">Rp 15.000</span></div><div class="item-counter"><button class="count-btn minus" data-id="17">-</button><span class="count-val" id="qty-17">0</span><button class="count-btn plus" data-id="17" data-name="Rice bowl lada hitam" data-price="15000">+</button></div></div>
                 </div>
             </section>
-        </main>
-    </div>
+
+            <section class="scheduler-section">
+                <h2>Jadwalkan Preorder Anda</h2>
+                <p class="section-desc">Pilih tanggal dan waktu pengambilan katsu terhangat Anda.</p>
+                
+                <div class="scheduler-card">
+                    <h4>1. Pilih Tanggal</h4>
+                    <div class="date-selector">
+                        <button class="date-btn active" data-date="Besok">
+                            <span class="day">Besok</span>
+                            <span class="num" id="dateTomorrow">30 Jun</span>
+                        </button>
+                        <button class="date-btn" data-date="Lusa">
+                            <span class="day">Lusa</span>
+                            <span class="num" id="dateLusa">01 Jul</span>
+                        </button>
+                        <button class="date-btn" data-date="3 Hari Lagi">
+                            <span class="day">Selesai</span>
+                            <span class="num" id="dateThree">02 Jul</span>
+                        </button>
+                    </div>
+
+                    <h4>2. Pilih Jam Pengambilan</h4>
+                    <div class="time-slots">
+                        <button class="time-btn active" data-time="08:00 - 09:00">08:00 - 09:00</button>
+                        <button class="time-btn" data-time="09:00 - 10:00">09:00 - 10:00</button>
+                        <button class="time-btn" data-time="10:00 - 11:00">10:00 - 11:00</button>
+                        <button class="time-btn" data-time="11:00 - 12:00">11:00 - 12:00</button>
+                        <button class="time-btn" data-time="12:00 - 13:00">12:00 - 13:00</button>
+                        <button class="time-btn" data-time="13:00 - 14:00">13:00 - 14:00</button>
+                    </div>
+
+                    <div class="preorder-summary">
+                        <div class="summary-info">
+                            <span>Pilihan Waktu:</span>
+                            <strong id="selectedTimeText">Besok, 08:00 - 09:00</strong>
+                        </div>
+                        <button class="btn btn-primary next-step-btn" id="preorderSubmitBtn" disabled>Kirim via WhatsApp</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 KatsuBowl. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const dateTomorrow = document.getElementById('dateTomorrow');
+            const dateLusa = document.getElementById('dateLusa');
+            const dateThree = document.getElementById('dateThree');
+            const selectedTimeText = document.getElementById('selectedTimeText');
+            const preorderSubmitBtn = document.getElementById('preorderSubmitBtn');
+
+            const options = { day: 'numeric', month: 'short' };
+            const today = new Date();
+            
+            const tomorrow = new Date(today);
+            tomorrow.setDate(today.getDate() + 1);
+            dateTomorrow.textContent = tomorrow.toLocaleDateString('id-ID', options);
+
+            const lusa = new Date(today);
+            lusa.setDate(today.getDate() + 2);
+            dateLusa.textContent = lusa.toLocaleDateString('id-ID', options);
+
+            const threeDays = new Date(today);
+            threeDays.setDate(today.getDate() + 3);
+            dateThree.textContent = threeDays.toLocaleDateString('id-ID', options);
+
+            let selectedDate = 'Besok (' + dateTomorrow.textContent + ')';
+            let selectedTime = '08:00 - 09:00';
+            let preorderCart = [];
+
+            const updateTimeText = () => {
+                selectedTimeText.textContent = `${selectedDate}, pukul ${selectedTime}`;
+            };
+
+            document.querySelectorAll('.date-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.date-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const text = btn.getAttribute('data-date');
+                    const numText = btn.querySelector('.num').textContent;
+                    selectedDate = `${text} (${numText})`;
+                    updateTimeText();
+                });
+            });
+
+            document.querySelectorAll('.time-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.time-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    selectedTime = btn.getAttribute('data-time');
+                    updateTimeText();
+                });
+            });
+
+            const updateCounts = () => {
+                preorderCart.forEach(item => {
+                    const el = document.getElementById(`qty-${item.id}`);
+                    if (el) el.textContent = item.quantity;
+                });
+                
+                [4, 5, 6, 7, 9, 17].forEach(id => {
+                    const item = preorderCart.find(i => i.id === id);
+                    if (!item) {
+                        const el = document.getElementById(`qty-${id}`);
+                        if (el) el.textContent = 0;
+                    }
+                });
+
+                const totalItems = preorderCart.reduce((sum, i) => sum + i.quantity, 0);
+                preorderSubmitBtn.disabled = totalItems === 0;
+            };
+
+            document.querySelectorAll('.count-btn.plus').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const id = Number(btn.getAttribute('data-id'));
+                    const name = btn.getAttribute('data-name');
+                    const price = Number(btn.getAttribute('data-price'));
+                    
+                    const existing = preorderCart.find(i => i.id === id);
+                    if (existing) {
+                        existing.quantity++;
+                    } else {
+                        preorderCart.push({ id, name, price, quantity: 1 });
+                    }
+                    updateCounts();
+                });
+            });
+
+            document.querySelectorAll('.count-btn.minus').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const id = Number(btn.getAttribute('data-id'));
+                    const existingIdx = preorderCart.findIndex(i => i.id === id);
+                    
+                    if (existingIdx > -1) {
+                        if (preorderCart[existingIdx].quantity > 1) {
+                            preorderCart[existingIdx].quantity--;
+                        } else {
+                            preorderCart.splice(existingIdx, 1);
+                        }
+                    }
+                    updateCounts();
+                });
+            });
+
+            preorderSubmitBtn.addEventListener('click', () => {
+                let textLines = `Halo KatsuBowl, saya ingin melakukan Preorder:\n\n`;
+                textLines += `*Jadwal:* ${selectedDate} | Pukul ${selectedTime}\n\n`;
+                textLines += `*Daftar Menu:*\n`;
+                
+                let subtotal = 0;
+                preorderCart.forEach(item => {
+                    textLines += `- ${item.quantity}x ${item.name} (Rp ${(item.price * item.quantity).toLocaleString('id-ID')})\n`;
+                    subtotal += item.price * item.quantity;
+                });
+                
+                textLines += `\n*Total:* Rp ${subtotal.toLocaleString('id-ID')}\n\nMohon segera dikonfirmasi. Terima kasih!`;
+                
+                const waUrl = `https://wa.me/62817567166?text=${encodeURIComponent(textLines)}`;
+                window.open(waUrl, '_blank');
+            });
+
+            updateTimeText();
+        });
+    </script>
+    <script src="main.js"></script>
 </body>
 </html>

@@ -3,273 +3,483 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - Katsu Kantin</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Menu Bento - KatsuBowl Premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="menu.css">
 </head>
 <body>
-    <header class="status-header">
-        <div class="status-container">
-            <div class="status-item">
-                <span class="pulse-indicator"></span>
-                <strong>STATUS: BUKA</strong>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-accent">Katsu</span>Bowl
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="menu.html" class="active">Menu Kami</a>
+                <a href="preorder.html">Preorder</a>
+                <a href="loyalty.html">Loyalty</a>
+                <a href="tentang.html">Tentang Kami</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="https://wa.me/6281234567890?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Katsu%20Bowl." target="_blank" class="btn btn-primary">Pesan Sekarang</a>
             </div>
-            <div class="status-divider"></div>
-            <div class="status-item">
-                <span class="icon">🏃</span>
-                <span>Antrean: <strong>Lancar</strong></span>
-            </div>
-            <div class="status-divider"></div>
-            <div class="status-item">
-                <span class="icon">🍱</span>
-                <span>Sisa Pre-Order: <strong>12 Porsi</strong></span>
-            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
         </div>
     </header>
 
-    <div class="dashboard-layout">
-        <nav class="sidebar">
-            <div class="brand">
-                <h1>Katsu<span>Kantin</span></h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="beranda.html">Beranda</a></li>
-                <li><a href="menu.html" class="active">Menu & Pesan</a></li>
-                <li><a href="preorder.html">Jadwal Pre-Order</a></li>
-                <li><a href="tracker.html">Lacak Pesanan</a></li>
-                <li><a href="loyalty.html">Loyalty Hub</a></li>
-            </ul>
+    <div class="mobile-drawer">
+        <div class="drawer-header">
+            <a href="index.html" class="logo"><span class="logo-accent">Katsu</span>Bowl</a>
+            <button class="drawer-close" aria-label="Close Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <nav class="drawer-links">
+            <a href="index.html">Beranda</a>
+            <a href="menu.html">Menu Kami</a>
+            <a href="preorder.html">Preorder</a>
+            <a href="loyalty.html">Loyalty</a>
+            <a href="tentang.html">Tentang Kami</a>
+            <a href="https://wa.me/6281234567890?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Katsu%20Bowl." target="_blank" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%;">Pesan Sekarang</a>
         </nav>
+    </div>
+    <div class="drawer-overlay"></div>
 
-        <main class="main-content">
-            <section class="menu-section">
-                <div class="menu-layout">
-                    <!-- Catalog -->
-                    <div class="menu-catalog">
-                        <div class="section-header">
-                            <h3>Menu Utama</h3>
-                            <p>Harga spesial mahasiswa. Katsu & Ayam pilihan.</p>
-                        </div>
-                        <div class="katsu-grid">
-                            <!-- Item 1 -->
-                            <div class="katsu-card" onclick="openModalDesktop('Katsu Sambal Matah', 'Rp 15.000', 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')" style="cursor: pointer;">
-                                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
-                                <div class="card-content">
-                                    <h4>Katsu Sambal Matah</h4>
-                                    <p>Daging pilihan dengan siraman sambal matah pedas segar.</p>
-                                    <div class="card-footer">
-                                        <span class="price">Rp 15.000</span>
-                                        <button class="btn-add">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Item 2 -->
-                            <div class="katsu-card" onclick="openModalDesktop('Katsu Keju', 'Rp 15.000', 'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')" style="cursor: pointer;">
-                                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
-                                <div class="card-content">
-                                    <h4>Katsu Keju</h4>
-                                    <p>Dilengkapi saus keju cheddar lumer yang gurih.</p>
-                                    <div class="card-footer">
-                                        <span class="price">Rp 15.000</span>
-                                        <button class="btn-add">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Item 3 -->
-                            <div class="katsu-card" onclick="openModalDesktop('Katsu Lada Hitam', 'Rp 15.000', 'https://images.unsplash.com/photo-1627914946397-6cb31d1b32d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')" style="cursor: pointer;">
-                                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1627914946397-6cb31d1b32d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
-                                <div class="card-content">
-                                    <h4>Katsu Lada Hitam</h4>
-                                    <p>Bumbu blackpepper manis pedas khas oriental.</p>
-                                    <div class="card-footer">
-                                        <span class="price">Rp 15.000</span>
-                                        <button class="btn-add">+</button>
-                                    </div>
-                                </div>
-                            </div>
+    <main class="menu-main container">
+        <div class="menu-header">
+            <h1>Katalog Menu Premium</h1>
+            <p>Jelajahi kelezatan Katsu Rice Bowl Jepang terbaik. Klik menu pilihan untuk memesan langsung lewat WhatsApp.</p>
+        </div>
 
-                            <!-- Item 4 -->
-                            <div class="katsu-card" onclick="openModalDesktop('Katsu Mayo', 'Rp 15.000', 'https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')" style="cursor: pointer;">
-                                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
-                                <div class="card-content">
-                                    <h4>Katsu Mayo</h4>
-                                    <p>Disajikan dengan saus mayones spesial yang creamy.</p>
-                                    <div class="card-footer">
-                                        <span class="price">Rp 15.000</span>
-                                        <button class="btn-add">+</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Item 5 -->
-                            <div class="katsu-card" onclick="openModalDesktop('Katsu Mentai', 'Rp 15.000', 'https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')" style="cursor: pointer;">
-                                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
-                                <div class="card-content">
-                                    <h4>Katsu Mentai</h4>
-                                    <p>Saus mentai Jepang dibakar (torched) harum.</p>
-                                    <div class="card-footer">
-                                        <span class="price">Rp 15.000</span>
-                                        <button class="btn-add">+</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Item 6 -->
-                            <div class="katsu-card" onclick="openModalDesktop('Katsu Cabe Garam', 'Rp 15.000', 'https://images.unsplash.com/photo-1615557960916-5f4791effe9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80')" style="cursor: pointer;">
-                                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1615557960916-5f4791effe9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');"></div>
-                                <div class="card-content">
-                                    <h4>Katsu Cabe Garam</h4>
-                                    <p>Bumbu cabai garam gurih pedas nendang.</p>
-                                    <div class="card-footer">
-                                        <span class="price">Rp 15.000</span>
-                                        <button class="btn-add">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="section-header" style="margin-top: 40px;">
-                            <h3>Snack & Tambahan</h3>
-                        </div>
-                        <div class="katsu-grid">
-                            <div class="katsu-card">
-                                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); height: 180px;"></div>
-                                <div class="card-content">
-                                    <h4>Burger</h4>
-                                    <p>Burger daging ayam lezat siap santap.</p>
-                                    <div class="card-footer" style="margin-top: 12px;">
-                                        <span class="price">Rp 10.000</span>
-                                        <button class="btn-add">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="katsu-card">
-                                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1576107232684-1279f3908594?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'); height: 180px;"></div>
-                                <div class="card-content">
-                                    <h4>French Fries</h4>
-                                    <p>Kentang goreng renyah.</p>
-                                    <div class="card-footer" style="margin-top: 12px;">
-                                        <span class="price">Rp 8.000</span>
-                                        <button class="btn-add">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Customization Modal Desktop -->
-                        <div class="modal-overlay" id="customModalDesktop">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h3>Kustomisasi Pesanan</h3>
-                                    <button class="modal-close" onclick="document.getElementById('customModalDesktop').classList.remove('show'); event.stopPropagation();">✕</button>
-                                </div>
-                                
-                                <div style="display: flex; gap: 16px; margin-bottom: 24px;">
-                                    <img id="modalImgDesk" src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" style="width: 80px; height: 80px; border-radius: var(--radius-md); object-fit: cover;">
-                                    <div>
-                                        <h4 id="modalTitleDesk" style="font-size: 1.2rem; margin-bottom: 4px;">Katsu Sambal Matah</h4>
-                                        <p id="modalPriceDesk" style="font-size: 1.1rem; color: var(--accent-red); font-weight: 800;">Rp 15.000</p>
-                                    </div>
-                                </div>
-
-                                <div class="option-group">
-                                    <div class="option-title">Pilihan Lauk Utama <span class="option-badge">Wajib</span></div>
-                                    <label class="radio-label">
-                                        <span style="font-weight: 600;">Katsu</span>
-                                        <input type="radio" name="laukDesk" checked>
-                                    </label>
-                                    <label class="radio-label">
-                                        <span style="font-weight: 600;">Ayam (Potong Persegi / Bite-sized)</span>
-                                        <input type="radio" name="laukDesk">
-                                    </label>
-                                </div>
-
-                                <div class="option-group">
-                                    <div class="option-title">Ekstra Telur <span class="option-badge" style="background: var(--border-color); color: var(--text-muted);">Opsional</span></div>
-                                    <label class="check-label">
-                                        <span style="font-weight: 600;">+ Telur (+3k)</span>
-                                        <input type="checkbox">
-                                    </label>
-                                </div>
-
-                                <div class="option-group">
-                                    <div class="option-title">Ekstra Saus <span class="option-badge" style="background: var(--border-color); color: var(--text-muted);">Opsional</span></div>
-                                    <label class="check-label">
-                                        <span style="font-weight: 600;">+ Lada Hitam (+2k)</span>
-                                        <input type="checkbox">
-                                    </label>
-                                    <label class="check-label">
-                                        <span style="font-weight: 600;">+ Mayo (+2k)</span>
-                                        <input type="checkbox">
-                                    </label>
-                                    <label class="check-label">
-                                        <span style="font-weight: 600;">+ Mentai (+2k)</span>
-                                        <input type="checkbox">
-                                    </label>
-                                </div>
-
-                                <button class="btn btn-primary" style="width: 100%; padding: 16px; font-size: 1.1rem; margin-top: 16px;" onclick="document.getElementById('customModalDesktop').classList.remove('show')">Tambahkan ke Keranjang</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Cart -->
-                    <div class="cart-sidebar-wrapper">
-                        <aside class="sticky-cart">
-                            <h3>Keranjang 🛒</h3>
-
-                            <div class="cart-items">
-                                <div class="cart-item">
-                                    <div class="item-info">
-                                        <span class="item-name">Katsu Lada Hitam</span>
-                                        <span class="item-price">Rp 15.000</span>
-                                    </div>
-                                    <div class="item-qty">
-                                        <button class="qty-btn">-</button>
-                                        <span class="qty-val">1</span>
-                                        <button class="qty-btn">+</button>
-                                    </div>
-                                </div>
-                                <div class="cart-item">
-                                    <div class="item-info">
-                                        <span class="item-name">Katsu Keju</span>
-                                        <span class="item-price">Rp 15.000</span>
-                                    </div>
-                                    <div class="item-qty">
-                                        <button class="qty-btn">-</button>
-                                        <span class="qty-val">1</span>
-                                        <button class="qty-btn">+</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cart-summary">
-                                <div class="summary-row">
-                                    <span>Subtotal</span>
-                                    <span id="subtotal">Rp 30.000</span>
-                                </div>
-                                <div class="summary-row total">
-                                    <span>Total Tagihan</span>
-                                    <span id="grand-total">Rp 30.000</span>
-                                </div>
-                                <a href="checkout.html" style="text-decoration: none;">
-                                    <button class="btn btn-primary btn-checkout" style="width: 100%;">Checkout Sekarang</button>
-                                </a>
-                            </div>
-                        </aside>
+        <h2 class="category-title">Menu Katsu</h2>
+        <div class="menu-grid-bento">
+            <div class="menu-card-bento featured" data-category="katsu">
+                <div class="card-image-wrap">
+                    <div class="image-bg-glow"></div>
+                    <img src="assets/product_curry.png" alt="Katsu sambal matah" class="food-plate">
+                    <span class="card-badge badge-bestseller">Terpopuler ⭐</span>
+                </div>
+                <div class="card-body">
+                    <span class="featured-tag">Menu Pilihan Premium</span>
+                    <h3>Katsu sambal matah</h3>
+                    <p>Katsu renyah dengan siraman sambal matah khas yang segar dan pedas. Irisan bawang merah segar, cabai rawit, dan sereh wangi berpadu dengan minyak kelapa asli di atas daging filet ayam katsu renyah premium.</p>
+                    <div class="card-price-action">
+                        <span class="price">Rp 15.000</span>
+                        <a href="https://wa.me/62817567166?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Katsu%20sambal%20matah." target="_blank" class="btn-order-now">
+                            <span>Pesan</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
                     </div>
                 </div>
-            </section>
-        </main>
-    </div>
-    <script>
-        function openModalDesktop(title, price, imgUrl) {
-            document.getElementById('modalTitleDesk').innerText = title;
-            document.getElementById('modalPriceDesk').innerText = price;
-            document.getElementById('modalImgDesk').src = imgUrl;
-            document.getElementById('customModalDesktop').classList.add('show');
-        }
-    </script>
+            </div>
+
+            <div class="menu-card-bento" data-category="katsu">
+                <div class="card-image-wrap">
+                    <div class="image-bg-glow"></div>
+                    <img src="assets/product_curry.png" alt="Katsu sambal geprek" class="food-plate">
+                    <span class="card-badge badge-spicy">Pedas Geprek 🌶️</span>
+                </div>
+                <div class="card-body">
+                    <h3>Katsu sambal geprek</h3>
+                    <p>Katsu renyah dengan baluran sambal geprek yang pedas nendang.</p>
+                    <div class="card-price-action">
+                        <span class="price">Rp 15.000</span>
+                        <a href="https://wa.me/62817567166?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Katsu%20sambal%20geprek." target="_blank" class="btn-order-now">
+                            <span>Pesan</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card-bento" data-category="katsu">
+                <div class="card-image-wrap">
+                    <div class="image-bg-glow"></div>
+                    <img src="assets/product_curry.png" alt="Katsu cabai garam" class="food-plate">
+                    <span class="card-badge badge-recommend">Gurih Pedas 🧂</span>
+                </div>
+                <div class="card-body">
+                    <h3>Katsu cabai garam</h3>
+                    <p>Katsu renyah dengan bumbu cabai garam gurih dan pedas.</p>
+                    <div class="card-price-action">
+                        <span class="price">Rp 15.000</span>
+                        <a href="https://wa.me/62817567166?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Katsu%20cabai%20garam." target="_blank" class="btn-order-now">
+                            <span>Pesan</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card-bento featured" data-category="katsu">
+                <div class="card-image-wrap">
+                    <div class="image-bg-glow"></div>
+                    <img src="assets/product_curry.png" alt="Katsu saus teriyaki" class="food-plate">
+                    <span class="card-badge badge-bestseller">Rekomendasi 🌟</span>
+                </div>
+                <div class="card-body">
+                    <span class="featured-tag">Menu Pilihan Premium</span>
+                    <h3>Katsu saus teriyaki</h3>
+                    <p>Katsu renyah dengan siraman saus teriyaki yang manis dan gurih otentik. Menggunakan resep saus tradisional Jepang buatan tangan koki bersertifikat.</p>
+                    <div class="card-price-action">
+                        <span class="price">Rp 15.000</span>
+                        <a href="https://wa.me/62817567166?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Katsu%20saus%20teriyaki." target="_blank" class="btn-order-now">
+                            <span>Pesan</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card-bento" data-category="katsu">
+                <div class="card-image-wrap">
+                    <div class="image-bg-glow"></div>
+                    <img src="assets/product_curry.png" alt="Katsu saus lada hitam" class="food-plate">
+                    <span class="card-badge badge-recommend">Lada Hitam 🖤</span>
+                </div>
+                <div class="card-body">
+                    <h3>Katsu saus lada hitam</h3>
+                    <p>Katsu renyah dengan saus lada hitam pekat yang hangat dan berempah.</p>
+                    <div class="card-price-action">
+                        <span class="price">Rp 15.000</span>
+                        <a href="https://wa.me/62817567166?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Katsu%20saus%20lada%20hitam." target="_blank" class="btn-order-now">
+                            <span>Pesan</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card-bento" data-category="katsu">
+                <div class="card-image-wrap">
+                    <div class="image-bg-glow"></div>
+                    <img src="assets/product_curry.png" alt="Katsu saus mentega" class="food-plate">
+                    <span class="card-badge badge-recommend">Saus Mentega 🧈</span>
+                </div>
+                <div class="card-body">
+                    <h3>Katsu saus mentega</h3>
+                    <p>Katsu renyah dengan saus mentega spesial yang gurih dan wangi.</p>
+                    <div class="card-price-action">
+                        <span class="price">Rp 15.000</span>
+                        <a href="https://wa.me/62817567166?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Katsu%20saus%20mentega." target="_blank" class="btn-order-now">
+                            <span>Pesan</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card-bento" data-category="katsu">
+                <div class="card-image-wrap">
+                    <div class="image-bg-glow"></div>
+                    <img src="assets/product_curry.png" alt="Katsu saus mayo" class="food-plate">
+                    <span class="card-badge badge-recommend">Creamy Mayo 🥛</span>
+                </div>
+                <div class="card-body">
+                    <h3>Katsu saus mayo</h3>
+                    <p>Katsu renyah dengan limpahan saus mayo lumer yang creamy dan lezat.</p>
+                    <div class="card-price-action">
+                        <span class="price">Rp 15.000</span>
+                        <a href="https://wa.me/62817567166?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Katsu%20saus%20mayo." target="_blank" class="btn-order-now">
+                            <span>Pesan</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card-bento" data-category="katsu">
+                <div class="card-image-wrap">
+                    <div class="image-bg-glow"></div>
+                    <img src="assets/product_curry.png" alt="Katsu mayo pedas" class="food-plate">
+                    <span class="card-badge badge-spicy">Spicy Mayo 🌶️</span>
+                </div>
+                <div class="card-body">
+                    <h3>Katsu mayo pedas</h3>
+                    <p>Katsu renyah berpadu saus mayo pedas yang creamy dengan sensasi spicy.</p>
+                    <div class="card-price-action">
+                        <span class="price">Rp 15.000</span>
+                        <a href="https://wa.me/62817567166?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Katsu%20mayo%20pedas." target="_blank" class="btn-order-now">
+                            <span>Pesan</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card-bento featured" data-category="katsu">
+                <div class="card-image-wrap">
+                    <div class="image-bg-glow"></div>
+                    <img src="assets/product_curry.png" alt="Katsu saus keju" class="food-plate">
+                    <span class="card-badge badge-bestseller">Cheese Melt 🧀</span>
+                </div>
+                <div class="card-body">
+                    <span class="featured-tag">Menu Pilihan Premium</span>
+                    <h3>Katsu saus keju</h3>
+                    <p>Katsu renyah dengan siraman saus keju lumer yang gurih ngeju banget. Saus keju cheddar kualitas tinggi yang dilelehkan khusus untuk pecinta keju.</p>
+                    <div class="card-price-action">
+                        <span class="price">Rp 15.000</span>
+                        <a href="https://wa.me/62817567166?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Katsu%20saus%20keju." target="_blank" class="btn-order-now">
+                            <span>Pesan</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="category-title">Rice Bowl</h2>
+        <div class="menu-grid-bento">
+            <div class="menu-card-bento" data-category="ricebowl">
+                <div class="card-image-wrap">
+                    <div class="image-bg-glow"></div>
+                    <img src="assets/product_donburi.png" alt="Rice bowl matah" class="food-plate">
+                    <span class="card-badge badge-recommend">Segar Khas Bali 🌴</span>
+                </div>
+                <div class="card-body">
+                    <h3>Rice bowl matah</h3>
+                    <p>Rice bowl ayam gurih dengan sambal matah spesial yang segar aromatik.</p>
+                    <div class="card-price-action">
+                        <span class="price">Rp 15.000</span>
+                        <a href="https://wa.me/62817567166?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Rice%20bowl%20matah." target="_blank" class="btn-order-now">
+                            <span>Pesan</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card-bento" data-category="ricebowl">
+                <div class="card-image-wrap">
+                    <div class="image-bg-glow"></div>
+                    <img src="assets/product_donburi.png" alt="Rice bowl cabai garam" class="food-plate">
+                    <span class="card-badge badge-recommend">Favorit Kantin 🧂</span>
+                </div>
+                <div class="card-body">
+                    <h3>Rice bowl cabai garam</h3>
+                    <p>Rice bowl nikmat berbalur bumbu cabai garam pedas asin favorit.</p>
+                    <div class="card-price-action">
+                        <span class="price">Rp 15.000</span>
+                        <a href="https://wa.me/62817567166?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Rice%20bowl%20cabai%20garam." target="_blank" class="btn-order-now">
+                            <span>Pesan</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card-bento" data-category="ricebowl">
+                <div class="card-image-wrap">
+                    <div class="image-bg-glow"></div>
+                    <img src="assets/product_donburi.png" alt="Rice bowl sambal geprek" class="food-plate">
+                    <span class="card-badge badge-spicy">Ekstra Pedas 🌶️</span>
+                </div>
+                <div class="card-body">
+                    <h3>Rice bowl sambal geprek</h3>
+                    <p>Rice bowl ayam empuk dengan baluran sambal geprek yang pedas mantap.</p>
+                    <div class="card-price-action">
+                        <span class="price">Rp 15.000</span>
+                        <a href="https://wa.me/62817567166?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Rice%20bowl%20sambal%20geprek." target="_blank" class="btn-order-now">
+                            <span>Pesan</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card-bento" data-category="ricebowl">
+                <div class="card-image-wrap">
+                    <div class="image-bg-glow"></div>
+                    <img src="assets/product_donburi.png" alt="Rice bowl saus mayo" class="food-plate">
+                    <span class="card-badge badge-recommend">Creamy 🥛</span>
+                </div>
+                <div class="card-body">
+                    <h3>Rice bowl saus mayo</h3>
+                    <p>Rice bowl ayam gurih berpadu dengan saus mayo lumer manis creamy.</p>
+                    <div class="card-price-action">
+                        <span class="price">Rp 15.000</span>
+                        <a href="https://wa.me/62817567166?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Rice%20bowl%20saus%20mayo." target="_blank" class="btn-order-now">
+                            <span>Pesan</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card-bento" data-category="ricebowl">
+                <div class="card-image-wrap">
+                    <div class="image-bg-glow"></div>
+                    <img src="assets/product_donburi.png" alt="Rice bowl mayo pedas" class="food-plate">
+                    <span class="card-badge badge-spicy">Spicy Creamy 🌶️</span>
+                </div>
+                <div class="card-body">
+                    <h3>Rice bowl mayo pedas</h3>
+                    <p>Rice bowl ayam lezat dengan saus mayo pedas yang menggugah selera.</p>
+                    <div class="card-price-action">
+                        <span class="price">Rp 15.000</span>
+                        <a href="https://wa.me/62817567166?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Rice%20bowl%20mayo%20pedas." target="_blank" class="btn-order-now">
+                            <span>Pesan</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card-bento featured" data-category="ricebowl">
+                <div class="card-image-wrap">
+                    <div class="image-bg-glow"></div>
+                    <img src="assets/product_mentai.png" alt="Rice bowl saus keju" class="food-plate">
+                    <span class="card-badge badge-bestseller">Ngeju Banget 🧀</span>
+                </div>
+                <div class="card-body">
+                    <span class="featured-tag">Menu Pilihan Premium</span>
+                    <h3>Rice bowl saus keju</h3>
+                    <p>Rice bowl istimewa berbalur saus keju melimpah nan gurih di setiap gigitan. Kombinasi nasi pulen hangat dan ayam katsu yang berselimut keju meleleh melimpah.</p>
+                    <div class="card-price-action">
+                        <span class="price">Rp 15.000</span>
+                        <a href="https://wa.me/62817567166?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Rice%20bowl%20saus%20keju." target="_blank" class="btn-order-now">
+                            <span>Pesan</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card-bento" data-category="ricebowl">
+                <div class="card-image-wrap">
+                    <div class="image-bg-glow"></div>
+                    <img src="assets/product_donburi.png" alt="Rice bowl teriyaki" class="food-plate">
+                    <span class="card-badge badge-recommend">Klasik Jepang 🍱</span>
+                </div>
+                <div class="card-body">
+                    <h3>Rice bowl teriyaki</h3>
+                    <p>Rice bowl klasik dengan baluran saus teriyaki otentik lezat.</p>
+                    <div class="card-price-action">
+                        <span class="price">Rp 15.000</span>
+                        <a href="https://wa.me/62817567166?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Rice%20bowl%20teriyaki." target="_blank" class="btn-order-now">
+                            <span>Pesan</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card-bento" data-category="ricebowl">
+                <div class="card-image-wrap">
+                    <div class="image-bg-glow"></div>
+                    <img src="assets/product_donburi.png" alt="Rice bowl lada hitam" class="food-plate">
+                    <span class="card-badge badge-recommend">Hangat Berempah 🖤</span>
+                </div>
+                <div class="card-body">
+                    <h3>Rice bowl lada hitam</h3>
+                    <p>Rice bowl lezat berbalur bumbu lada hitam gurih pekat berempah.</p>
+                    <div class="card-price-action">
+                        <span class="price">Rp 15.000</span>
+                        <a href="https://wa.me/62817567166?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Rice%20bowl%20lada%20hitam." target="_blank" class="btn-order-now">
+                            <span>Pesan</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card-bento" data-category="ricebowl">
+                <div class="card-image-wrap">
+                    <div class="image-bg-glow"></div>
+                    <img src="assets/product_donburi.png" alt="Chicken barbeque" class="food-plate">
+                    <span class="card-badge badge-recommend">Manis Gurih 🍖</span>
+                </div>
+                <div class="card-body">
+                    <h3>Chicken barbeque</h3>
+                    <p>Rice bowl daging ayam empuk dengan bumbu barbeque gurih manis spesial.</p>
+                    <div class="card-price-action">
+                        <span class="price">Rp 15.000</span>
+                        <a href="https://wa.me/62817567166?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Chicken%20barbeque." target="_blank" class="btn-order-now">
+                            <span>Pesan</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="category-title">Tambahan (Add-ons)</h2>
+        <div class="menu-grid-bento">
+            <div class="menu-card-bento" data-category="addons">
+                <div class="card-image-wrap">
+                    <div class="image-bg-glow"></div>
+                    <img src="assets/highlight_katsu.png" alt="Telur mata sapi" class="food-plate">
+                    <span class="card-badge badge-recommend">Ekstra Protein 🍳</span>
+                </div>
+                <div class="card-body">
+                    <h3>Telur mata sapi</h3>
+                    <p>Pelengkap nikmat untuk hidangan rice bowl atau katsu Anda.</p>
+                    <div class="card-price-action">
+                        <span class="price">Rp 3.000</span>
+                        <a href="https://wa.me/62817567166?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Telur%20mata%20sapi." target="_blank" class="btn-order-now">
+                            <span>Pesan</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card-bento" data-category="addons">
+                <div class="card-image-wrap">
+                    <div class="image-bg-glow"></div>
+                    <img src="katsu_plate.png" alt="Saus" class="food-plate">
+                    <span class="card-badge badge-recommend">Ekstra Saus 🍯</span>
+                </div>
+                <div class="card-body">
+                    <h3>Saus</h3>
+                    <p>Tambahan porsi saus ekstra untuk pengalaman makan yang lebih nikmat.</p>
+                    <div class="card-price-action">
+                        <span class="price">Rp 2.000</span>
+                        <a href="https://wa.me/62817567166?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Saus." target="_blank" class="btn-order-now">
+                            <span>Pesan</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card-bento" data-category="addons">
+                <div class="card-image-wrap">
+                    <div class="image-bg-glow"></div>
+                    <img src="katsu_plate.png" alt="Sambal" class="food-plate">
+                    <span class="card-badge badge-recommend">Ekstra Pedas 🌶️</span>
+                </div>
+                <div class="card-body">
+                    <h3>Sambal</h3>
+                    <p>Ekstra porsi sambal untuk penikmat pedas maksimal.</p>
+                    <div class="card-price-action">
+                        <span class="price">Rp 2.000</span>
+                        <a href="https://wa.me/62817567166?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Sambal." target="_blank" class="btn-order-now">
+                            <span>Pesan</span>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 KatsuBowl. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
 </body>
 </html>

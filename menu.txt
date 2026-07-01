@@ -1,15 +1,31 @@
-Katsu sambal matah
-katsu keju
-katsu lada hitam
-katsu mayo
-katsu mentai
-katsu cabe garam
-semua harga 15k
+MENU KATSU
 
-#pilihan katsu/ayam (harga sama saja)
+- Katsu sambal matah
+- Katsu sambal geprek
+- Katsu cabai garam
+- Katsu saus teriyaki
+- Katsu saus lada hitam
+- Katsu saus mentega
+- Katsu saus mayo
+- Katsu mayo pedas
+- Katsu saus keju
 
-extra saos (saos, lada hitam, mayo, mentai, dll) +2k
+ALL 15.000
 
-burger 10k
-French Fries 8k
-telur 3k
+TAMBAHAN
+
++ Telur mata sapi  3000
++ Saus             2000
++ Sambal           2000
+
+RICE BOWL
+
+- Rice bowl matah          15.000
+- Rice bowl cabai garam    15.000
+- Rice bowl sambal geprek  15.000
+- Rice bowl saus mayo      15.000
+- Rice bowl mayo pedas     15.000
+- Rice bowl saus keju      15.000
+- Rice bowl teriyaki       15.000
+- Rice bowl lada hitam     15.000
+- Chicken barbeque         15.000

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - KatsuBowl Premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tentang.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-accent">Katsu</span>Bowl
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="menu.html">Menu Kami</a>
+                <a href="preorder.html">Preorder</a>
+                <a href="loyalty.html">Loyalty</a>
+                <a href="tentang.html" class="active">Tentang Kami</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="https://wa.me/6281234567890?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Katsu%20Bowl." target="_blank" class="btn btn-primary">Pesan Sekarang</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer">
+        <div class="drawer-header">
+            <a href="index.html" class="logo"><span class="logo-accent">Katsu</span>Bowl</a>
+            <button class="drawer-close" aria-label="Close Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <nav class="drawer-links">
+            <a href="index.html">Beranda</a>
+            <a href="menu.html">Menu Kami</a>
+            <a href="preorder.html">Preorder</a>
+            <a href="loyalty.html">Loyalty</a>
+            <a href="tentang.html">Tentang Kami</a>
+            <a href="https://wa.me/6281234567890?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Katsu%20Bowl." target="_blank" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%;">Pesan Sekarang</a>
+        </nav>
+    </div>
+    <div class="drawer-overlay"></div>
+
+    <main class="about-main container">
+        <section class="about-hero">
+            <h1>Cerita KatsuBowl</h1>
+            <p>Membawa cita rasa Katsu Rice Bowl premium orisinil langsung dari koki bersertifikasi Jepang ke meja makan Anda.</p>
+        </section>
+
+        <!-- Kitchen values & Chef story -->
+        <section class="chef-section">
+            <div class="chef-card">
+                <img src="assets/avatar_customer.png" alt="Chef Kenji Sato" class="chef-img">
+                <div class="chef-content">
+                    <blockquote>
+                        "Kami memiliki misi sederhana: menyajikan semangkuk kebahagiaan hangat melalui cita rasa Katsu Jepang yang sesungguhnya. Kualitas bahan, kerenyahan panko, dan kelembutan daging adalah integritas dapur kami."
+                    </blockquote>
+                    <h5>Chef Kenji Sato</h5>
+                    <span>Founder & Head Chef KatsuBowl</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Ingredients & Tech highlights -->
+        <section class="ingredients-section">
+            <h2>Kualitas Tanpa Kompromi</h2>
+            <p class="section-subtitle">Setiap mangkuk KatsuBowl disiapkan dengan standar presisi Jepang menggunakan bahan baku lokal kualitas ekspor.</p>
+            
+            <div class="ingredients-grid">
+                <div class="ingredient-card">
+                    <div class="icon">🐔</div>
+                    <h4>Daging Filet Utuh</h4>
+                    <p>Hanya menggunakan bagian dada dan paha ayam filet utuh yang segar setiap hari. Bebas daging olahan/daging giling untuk mempertahankan serat juicy daging.</p>
+                </div>
+                <div class="ingredient-card">
+                    <div class="icon">🌾</div>
+                    <h4>Beras Jepang Asli</h4>
+                    <p>Nasi yang disajikan memiliki tekstur pulen alami yang khas untuk menyerap saus dashi manis secara merata tanpa menjadi lembek.</p>
+                </div>
+                <div class="ingredient-card">
+                    <div class="icon">🍳</div>
+                    <h4>Tepung Panko Premium</h4>
+                    <p>Balutan tepung roti khas Jepang berbutir kasar yang digoreng pada suhu konstan untuk menghasilkan kerenyahan maksimal yang tahan lama.</p>
+                </div>
+                <div class="ingredient-card">
+                    <div class="icon">🥣</div>
+                    <h4>Saus Racikan Koki</h4>
+                    <p>Saus kari, mentai, dan kaldu dashi diracik secara manual (handmade) tanpa tambahan bahan pengawet buatan untuk menjaga cita rasa otentik.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Business enquiries -->
+        <section class="business-cta">
+            <div class="cta-box">
+                <h2>Pertanyaan Bisnis & Katering</h2>
+                <p>Ingin memesan KatsuBowl dalam jumlah besar untuk acara kantor, pesta, atau katering harian? Konsultasikan langsung dengan tim admin kami.</p>
+                <a href="https://wa.me/6281234567890?text=Halo%20KatsuBowl,%20saya%20ingin%20bertanya%20mengenai%20pemesanan%20katering%20/%20acara." target="_blank" class="btn btn-primary">Hubungi Kami via WhatsApp</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 KatsuBowl. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

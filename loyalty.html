@@ -3,102 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loyalty Hub - Katsu Kantin</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Loyalty Program - KatsuBowl Premium</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="loyalty.css">
 </head>
 <body>
-    <header class="status-header">
-        <div class="status-container">
-            <div class="status-item">
-                <span class="pulse-indicator"></span>
-                <strong>STATUS: BUKA</strong>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-accent">Katsu</span>Bowl
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="menu.html">Menu Kami</a>
+                <a href="preorder.html">Preorder</a>
+                <a href="loyalty.html" class="active">Loyalty</a>
+                <a href="tentang.html">Tentang Kami</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="https://wa.me/6281234567890?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Katsu%20Bowl." target="_blank" class="btn btn-primary">Pesan Sekarang</a>
             </div>
-            <div class="status-divider"></div>
-            <div class="status-item">
-                <span class="icon">🏃</span>
-                <span>Antrean: <strong>Lancar</strong></span>
-            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
         </div>
     </header>
 
-    <div class="dashboard-layout">
-        <nav class="sidebar">
-            <div class="brand">
-                <h1>Katsu<span>Kantin</span></h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="beranda.html">Beranda</a></li>
-                <li><a href="menu.html">Menu & Pesan</a></li>
-                <li><a href="preorder.html">Jadwal Pre-Order</a></li>
-                <li><a href="tracker.html">Lacak Pesanan</a></li>
-                <li><a href="loyalty.html" class="active">Loyalty Hub</a></li>
-            </ul>
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer">
+        <div class="drawer-header">
+            <a href="index.html" class="logo"><span class="logo-accent">Katsu</span>Bowl</a>
+            <button class="drawer-close" aria-label="Close Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <nav class="drawer-links">
+            <a href="index.html">Beranda</a>
+            <a href="menu.html">Menu Kami</a>
+            <a href="preorder.html">Preorder</a>
+            <a href="loyalty.html">Loyalty</a>
+            <a href="tentang.html">Tentang Kami</a>
+            <a href="https://wa.me/6281234567890?text=Halo%20KatsuBowl,%20saya%20ingin%20memesan%20Katsu%20Bowl." target="_blank" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%;">Pesan Sekarang</a>
         </nav>
+    </div>
+    <div class="drawer-overlay"></div>
 
-        <main class="main-content">
-            <div class="loyalty-grid">
-                <div class="loyalty-main">
-                    <!-- Points Display -->
-                    <div class="point-card-desktop">
-                        <h2>Poin Saya</h2>
-                        <div class="point-val-desktop">420</div>
-                        <div class="point-progress-desktop">
-                            <div class="progress-fill-desktop" style="width: 84%;"></div>
-                        </div>
-                        <div class="point-desc-desktop">80 poin lagi untuk mendapatkan Katsu Gratis!</div>
+    <main class="loyalty-main container">
+        <div class="loyalty-grid">
+            <section class="left-section">
+                <!-- Virtual Card -->
+                <div class="membership-card">
+                    <div class="card-header">
+                        <span class="brand">KATSUBOWL MEMBER</span>
+                        <span class="tier gold">GOLD TIER</span>
                     </div>
-
-                    <!-- Rewards Catalog -->
-                    <div class="rewards-header">
-                        <h3>Tukar Hadiah</h3>
-                        <a href="#" style="font-size: 0.9rem; color: var(--accent-red); text-decoration: none; font-weight: 600;">Lihat Riwayat ❯</a>
+                    <div class="card-body">
+                        <span class="label">Poin Anda</span>
+                        <h2 class="points-val">250 Poin</h2>
                     </div>
-
-                    <div class="reward-grid">
-                        <!-- Reward 1 -->
-                        <div class="reward-item">
-                            <div class="reward-icon">🥤</div>
-                            <div class="reward-details">
-                                <h4>Es Teh Manis</h4>
-                                <p>100 Poin</p>
-                            </div>
-                            <button class="btn btn-outline" style="color: var(--accent-red); border-color: var(--accent-red); padding: 8px 16px; width: auto;">Tukar</button>
+                    <div class="card-footer">
+                        <div>
+                            <span class="label">Nama Member</span>
+                            <h5 class="value">Pelanggan Setia</h5>
                         </div>
-
-                        <!-- Reward 2 -->
-                        <div class="reward-item">
-                            <div class="reward-icon">🍟</div>
-                            <div class="reward-details">
-                                <h4>Kentang Goreng</h4>
-                                <p>250 Poin</p>
-                            </div>
-                            <button class="btn btn-outline" style="color: var(--accent-red); border-color: var(--accent-red); padding: 8px 16px; width: auto;">Tukar</button>
-                        </div>
-
-                        <!-- Reward 3 (Disabled) -->
-                        <div class="reward-item" style="opacity: 0.6;">
-                            <div class="reward-icon" style="background: var(--bg-main); color: var(--text-muted);">🍱</div>
-                            <div class="reward-details">
-                                <h4>Katsu Pilihan Gratis</h4>
-                                <p>500 Poin</p>
-                            </div>
-                            <button class="btn btn-outline" disabled style="background: var(--bg-main); color: var(--text-muted); border-color: var(--border-color); padding: 8px 16px; width: auto;">Kurang</button>
+                        <div>
+                            <span class="label">ID Member</span>
+                            <h5 class="value">KB-992019</h5>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Sidebar for QR -->
-                <aside class="qr-section">
-                    <h3 style="font-size: 1.1rem; margin-bottom: 12px; width: 100%;">Member QR Code</h3>
-                    <p>Tunjukkan QR Code ini ke kasir saat melakukan pembayaran untuk menambah poin Anda.</p>
-                    <div class="qr-box">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=KATSU-USER-0895" alt="QR Code User" style="width: 180px; height: 180px; opacity: 0.9;">
+                <!-- Info Benefits -->
+                <div class="info-card">
+                    <h3>Bagaimana Cara Kerja Poin?</h3>
+                    <p>Dapatkan poin secara otomatis setiap kali Anda melakukan pemesanan melalui WhatsApp kami. Setiap pembelanjaan senilai Rp 10.000 akan menghasilkan 1 Poin loyalitas.</p>
+                    <a href="https://wa.me/6281234567890?text=Halo%20KatsuBowl,%20saya%20ingin%20mengecek%20status%20poin%20member%20saya%20dengan%20ID%20KB-992019." target="_blank" class="btn-check-points">Cek Status Poin via WA ➔</a>
+                </div>
+            </section>
+
+            <section class="right-section">
+                <h3>Tukarkan Hadiah Spesial</h3>
+                <p class="section-desc">Gunakan poin member Anda untuk mendapatkan produk KatsuBowl secara gratis pada pesanan berikutnya lewat WhatsApp.</p>
+                
+                <div class="rewards-grid">
+                    <!-- Reward 1 -->
+                    <div class="reward-card">
+                        <img src="katsu_plate.png" alt="Free Saus Tambahan">
+                        <div class="reward-body">
+                            <h4>Free Saus / Sambal</h4>
+                            <span class="points-cost">15 Poin</span>
+                            <a href="https://wa.me/6281234567890?text=Halo%20KatsuBowl,%20saya%20ingin%20menukarkan%2015%20Poin%20member%20saya%20dengan%201%20Free%20Saus/Sambal%20untuk%20pesanan%20berikutnya." target="_blank" class="btn-redeem-link">Klaim via WA</a>
+                        </div>
                     </div>
-                    <div style="margin-top: 16px; font-size: 0.9rem; color: var(--text-main); font-weight: 700;">ID: KATSU-USER-0895</div>
-                </aside>
-            </div>
-        </main>
-    </div>
+                    <!-- Reward 2 -->
+                    <div class="reward-card">
+                        <img src="assets/highlight_katsu.png" alt="Free Telur Mata Sapi">
+                        <div class="reward-body">
+                            <h4>Free Telur Mata Sapi</h4>
+                            <span class="points-cost">25 Poin</span>
+                            <a href="https://wa.me/6281234567890?text=Halo%20KatsuBowl,%20saya%20ingin%20menukarkan%2025%20Poin%20member%20saya%20dengan%201%20porsi%20Free%20Telur%20Mata%20Sapi%20untuk%20pesanan%20berikutnya." target="_blank" class="btn-redeem-link">Klaim via WA</a>
+                        </div>
+                    </div>
+                    <!-- Reward 3 -->
+                    <div class="reward-card">
+                        <img src="assets/product_curry.png" alt="Free Katsu Saus Teriyaki">
+                        <div class="reward-body">
+                            <h4>Free Katsu Saus Teriyaki</h4>
+                            <span class="points-cost">120 Poin</span>
+                            <a href="https://wa.me/6281234567890?text=Halo%20KatsuBowl,%20saya%20ingin%20menukarkan%20120%20Poin%20member%20saya%20dengan%201%20porsi%20Free%20Katsu%20Saus%20Teriyaki%20untuk%20pesanan%20berikutnya." target="_blank" class="btn-redeem-link">Klaim via WA</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 KatsuBowl. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>

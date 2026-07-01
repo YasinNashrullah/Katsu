@@ -270,10 +270,10 @@ body {
 }
 
 .preorder-menu-list {
-    padding: 60px 16px 20px 16px;
+    padding: 90px 16px 20px 16px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 65px 24px;
+    gap: 90px 24px;
     overflow: visible;
 }
 
@@ -282,7 +282,7 @@ body {
     backdrop-filter: blur(15px);
     border: 1px solid rgba(240, 233, 223, 0.8);
     border-radius: var(--radius-lg);
-    padding: 60px 20px 20px 20px;
+    padding: 95px 20px 24px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -358,8 +358,8 @@ body {
     top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -393,20 +393,20 @@ body {
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid var(--light);
-    box-shadow: 0 8px 20px rgba(15, 15, 17, 0.1);
+    border: 5px solid var(--light);
+    box-shadow: 0 12px 28px rgba(15, 15, 17, 0.15), 0 4px 10px rgba(0, 0, 0, 0.08);
     transition: var(--transition-smooth);
     z-index: 2;
 }
 
 .preorder-item-card:hover .food-plate {
-    transform: rotate(8deg) scale(1.08);
-    filter: drop-shadow(0 10px 20px rgba(255, 107, 0, 0.2));
+    transform: translateY(-8px) rotate(6deg) scale(1.08);
+    box-shadow: 0 22px 45px rgba(255, 107, 0, 0.22), 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .preorder-item-card.active .food-plate {
     border-color: var(--primary);
-    box-shadow: 0 10px 25px rgba(255, 107, 0, 0.18);
+    box-shadow: 0 15px 32px rgba(255, 107, 0, 0.18);
 }
 
 .item-details {
@@ -791,7 +791,8 @@ body {
     }
     .preorder-menu-list {
         grid-template-columns: repeat(2, 1fr);
-        padding: 55px 16px 20px 16px;
+        padding: 90px 16px 20px 16px;
+        gap: 90px 24px;
     }
     .scheduler-card {
         grid-template-columns: 1fr;
@@ -825,6 +826,7 @@ body {
 @media (max-width: 600px) {
     .preorder-menu-list {
         grid-template-columns: 1fr;
-        gap: 55px 0;
+        gap: 85px 0;
+        padding-top: 85px;
     }
 }
